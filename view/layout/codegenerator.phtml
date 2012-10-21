@@ -1,0 +1,55 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<?php echo $this->headTitle('ZF2 '. $this->translate('Code Generator'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+		<?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+		<!-- Le styles -->
+		<?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/module/Codegenerator/images/favicon.ico'))
+						->appendStylesheet($this->basePath() . '/module/Codegenerator/css/bootstrap.min.css')
+						->appendStylesheet($this->basePath() . '/module/Codegenerator/css/style.css')
+						->appendStylesheet($this->basePath() . '/module/Codegenerator/css/bootstrap-responsive.min.css') ?>
+
+		<!-- Scripts -->
+		<?php echo $this->headScript()->appendFile($this->basePath() . '/module/codegenerator/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+									  ->appendFile($this->basePath() . '/module/codegenerator/js/jquery-1.7.2.min.js') ?>
+
+	</head>
+	
+	<body>
+
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="<?php echo $this->url('codegenerator') ?>">
+						<?php echo $this->translate('Code Generator') ?>
+					</a>
+					
+				</div>
+			</div>
+		</div> <!-- /navbar navbar-fixed-top -->
+
+		<div class="container">
+
+			<?php echo $this->content; ?>
+
+			<hr>
+
+			<footer>
+					Developed by <a href="http://www.linkedin.com/in/mitrax" target="_blank">MitraX</a> 
+					- <a href="http://www.inforbiro.com/blog-eng" target="_blank">Blog</a> 
+					- <a href="https://github.com/Inforbiro/ZF2-Code-Generator/" target="_blank">GitHub</a>
+			</footer>
+
+		</div> <!-- /container -->
+
+	</body>
+</html>

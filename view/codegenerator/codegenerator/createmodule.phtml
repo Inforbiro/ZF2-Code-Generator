@@ -1,0 +1,70 @@
+<div style="float:left; width:20%;">
+	<ul class="nav nav-pills nav-stacked">
+		<li class="active"><a href="createmodule">Module Generator</a></li>
+	</ul>
+</div>
+
+<div style="float:right; width:78%;">
+
+	<div style="padding-bottom:10px;">
+		<h2>Module Generator</h2>
+	</div>
+
+	<?php if($this->success == '1') { ?>
+		<div class="alert alert-success">
+			<b>Success</b>:<br/>
+			Module created in folder /module!
+		</div>
+	<?php } ?>
+
+	<?php if($this->success == '2') { ?>
+		<div class="alert alert-error">
+			<b>Error</b>:<br/>
+			Module already exists! Please, try with different name.
+		</div>
+	<?php } ?>
+
+	<div>
+		This generator helps you to generate the skeleton code needed by a ZF2 module.<br/>
+		<br/>
+		Enter name of module you want to create in the field below and click the Create button.<br/>
+		<br/>
+		Notes:<br/>
+		<ul>
+			<li>
+				Entered name is case-insensitive (e.g. foRuM will become Forum). It should only contain word characters.
+			</li>
+			<li>
+				Currently, the syntax like "ModuleName" is not supported.
+			</li>
+			<li>
+				Module will be created in /module directory. For now, you are not able to select other directory.
+			</li>
+			<li>
+				Created module's folder will have full persmissions (i.e. 777 read, write, access)
+			</li>
+			<li>
+				You have to manually edit your application's config file in order to "activate" the module.
+			</li>
+		</ul>
+
+	</div>
+
+	<div style="padding-top: 20px;">
+		<?php
+			$form = $this->form;
+			$form->setAttribute('action', $this->url('codegenerator', array('action' => 'createmodule')));
+			$form->prepare();
+			echo $this->form()->openTag($form) . PHP_EOL;
+			echo $this->formRow($form->get('module')) . PHP_EOL;
+			echo $this->formInput($form->get('submit')) . PHP_EOL;
+			echo $this->form()->closeTag($form) . PHP_EOL;
+		?>
+	</div>
+</div>
+
+<div style="clear:both;">
+</div>
+
+
+
