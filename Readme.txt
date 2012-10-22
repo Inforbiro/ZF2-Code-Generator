@@ -1,12 +1,12 @@
 ABOUT ZF CODE GENERATOR
-===========================
+===================
 
 The ZF Code Generator is a web interface for automatic code creation.
 
 Currently, it is suported only module code generator and new features will be implemented in the future (models, forms, controllers...).
 
 REQUIREMENTS AND NOTES
-===========================
+===================
 
 - The ZF Code Generator is created for Zend Framework 2 and can't be used with the previous ZF version.
 
@@ -21,7 +21,7 @@ REQUIREMENTS AND NOTES
 - It is strongly recommended to use the module on a development environment only!
 
 INSTALLATION
-===========================
+===================
 
 - Extract the folder's content into module/Codegenerator folder
 
@@ -42,9 +42,9 @@ INSTALLATION
 - That's it! You are now ready to create new modules auto-magically.
 
 USAGE
-===========================
+===================
 
-- Visit %yoursite%/codegenerator (or %yoursite%/public/codegenerator if you didn't setup virtual host)
+- Visit http://%yoursite%/codegenerator (or http://%yoursite%/public/codegenerator if you didn't setup virtual host)
 
 - The welcome page will be displayed
 
@@ -65,7 +65,7 @@ USAGE
 ...
 
 TODO
-===========================
+===================
 
 - Add support for syntax ModuleName
 
@@ -75,13 +75,19 @@ TODO
 
 - Develop other features (
 
-ABOUT THE AUTHOR
-===========================
+FURTHER READING
+===================
 
-Nenad Mitrovic - MitraX is founder and owner of Inforbiro - Information Technology Agency and BlicKlik - Internet Marketing Network running successfully for almost five years. He is also creator of the first Serbian live CD GNU/Linux distribution named MitraX (hence comes his nickname).
+Detail usage and instructions on: http://www.inforbiro.com/blog-eng/zend-framework-2-code-generator-tool/
+
+ABOUT THE AUTHOR
+===================
+
+Nenad Mitrovic - MitraX is an information technology engineer with more than 10 years of experience in software industry.
+He is also creator of the first Serbian live CD GNU/Linux distribution named MitraX (hence comes his nickname).
 
 HOW TO CONTRIBUTE
-===========================
+===================
 
 - test the module and create issues on the project's page on GitHub
 
